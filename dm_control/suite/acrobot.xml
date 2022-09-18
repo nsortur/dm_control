@@ -23,7 +23,7 @@ Based on Coulomb's [1] rather than Spong's [2] model.
     <light name="light" pos="0 0 6"/>
     <geom name="floor" size="3 3 .2" type="plane" material="grid"/>
     <site name="target" type="sphere" pos="0 0 4" size="0.2" material="target" group="3"/>
-    <camera name="fixed" pos="0 -6 2" zaxis="0 -1 0" euler="90 0 20"/>
+    <camera name="fixed" pos="0 -6 2" euler="90 0 20"/>
     <camera name="lookat" mode="targetbodycom" target="upper_arm" pos="0 -2 3"/>
     <body name="upper_arm" pos="0 0 2">
       <joint name="shoulder" type="hinge" axis="0 1 0"/>
