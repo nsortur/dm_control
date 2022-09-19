@@ -74,12 +74,12 @@ def swingup_no_grid(
 
 
 @SUITE.add("benchmarking")
-def swingup_camera1(
+def swingup_pan_camera1(
     time_limit=_DEFAULT_TIME_LIMIT, random=None, environment_kwargs=None
 ):
     """Returns Acrobot swingup no grid."""
     physics = Physics.from_xml_string(
-        common.read_model("acrobot_camera1.xml"), common.ASSETS
+        common.read_model("acrobot_pan_camera1.xml"), common.ASSETS
     )
     task = Balance(sparse=True, random=random)
     environment_kwargs = environment_kwargs or {}
@@ -89,12 +89,42 @@ def swingup_camera1(
 
 
 @SUITE.add("benchmarking")
-def swingup_camera2(
+def swingup_pan_camera2(
     time_limit=_DEFAULT_TIME_LIMIT, random=None, environment_kwargs=None
 ):
     """Returns Acrobot swingup no grid."""
     physics = Physics.from_xml_string(
-        common.read_model("acrobot_camera2.xml"), common.ASSETS
+        common.read_model("acrobot_pan_camera2.xml"), common.ASSETS
+    )
+    task = Balance(sparse=True, random=random)
+    environment_kwargs = environment_kwargs or {}
+    return control.Environment(
+        physics, task, time_limit=time_limit, **environment_kwargs
+    )
+
+
+@SUITE.add("benchmarking")
+def swingup_roll_camera1(
+    time_limit=_DEFAULT_TIME_LIMIT, random=None, environment_kwargs=None
+):
+    """Returns Acrobot swingup no grid."""
+    physics = Physics.from_xml_string(
+        common.read_model("acrobot_roll_camera1.xml"), common.ASSETS
+    )
+    task = Balance(sparse=True, random=random)
+    environment_kwargs = environment_kwargs or {}
+    return control.Environment(
+        physics, task, time_limit=time_limit, **environment_kwargs
+    )
+
+
+@SUITE.add("benchmarking")
+def swingup_roll_camera2(
+    time_limit=_DEFAULT_TIME_LIMIT, random=None, environment_kwargs=None
+):
+    """Returns Acrobot swingup no grid."""
+    physics = Physics.from_xml_string(
+        common.read_model("acrobot_roll_camera2.xml"), common.ASSETS
     )
     task = Balance(sparse=True, random=random)
     environment_kwargs = environment_kwargs or {}
