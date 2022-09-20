@@ -99,6 +99,126 @@ def swingup_no_grid(
     )
 
 
+@SUITE.add("benchmarking")
+def swingup_pan_camera1(
+    time_limit=_DEFAULT_TIME_LIMIT, random=None, environment_kwargs=None
+):
+    """Returns the Cartpole Swing-Up with pan camera angle."""
+    physics = Physics.from_xml_string(
+        common.read_model("cartpole_pan_camera1.xml"), common.ASSETS
+    )
+    task = Balance(swing_up=True, sparse=False, random=random)
+    environment_kwargs = environment_kwargs or {}
+    return control.Environment(
+        physics, task, time_limit=time_limit, **environment_kwargs
+    )
+
+
+@SUITE.add("benchmarking")
+def swingup_pan_camera2(
+    time_limit=_DEFAULT_TIME_LIMIT, random=None, environment_kwargs=None
+):
+    """Returns the Cartpole Swing-Up with pan camera angle."""
+    physics = Physics.from_xml_string(
+        common.read_model("cartpole_pan_camera2.xml"), common.ASSETS
+    )
+    task = Balance(swing_up=True, sparse=False, random=random)
+    environment_kwargs = environment_kwargs or {}
+    return control.Environment(
+        physics, task, time_limit=time_limit, **environment_kwargs
+    )
+
+
+@SUITE.add("benchmarking")
+def swingup_pan_camera3(
+    time_limit=_DEFAULT_TIME_LIMIT, random=None, environment_kwargs=None
+):
+    """Returns the Cartpole Swing-Up with pan camera angle."""
+    physics = Physics.from_xml_string(
+        common.read_model("cartpole_pan_camera3.xml"), common.ASSETS
+    )
+    task = Balance(swing_up=True, sparse=False, random=random)
+    environment_kwargs = environment_kwargs or {}
+    return control.Environment(
+        physics, task, time_limit=time_limit, **environment_kwargs
+    )
+
+
+@SUITE.add("benchmarking")
+def swingup_pan_camera4(
+    time_limit=_DEFAULT_TIME_LIMIT, random=None, environment_kwargs=None
+):
+    """Returns the Cartpole Swing-Up with pan camera angle."""
+    physics = Physics.from_xml_string(
+        common.read_model("cartpole_pan_camera4.xml"), common.ASSETS
+    )
+    task = Balance(swing_up=True, sparse=False, random=random)
+    environment_kwargs = environment_kwargs or {}
+    return control.Environment(
+        physics, task, time_limit=time_limit, **environment_kwargs
+    )
+
+
+@SUITE.add("benchmarking")
+def swingup_roll_camera1(
+    time_limit=_DEFAULT_TIME_LIMIT, random=None, environment_kwargs=None
+):
+    """Returns the Cartpole Swing-Up with roll camera angle."""
+    physics = Physics.from_xml_string(
+        common.read_model("cartpole_roll_camera1.xml"), common.ASSETS
+    )
+    task = Balance(swing_up=True, sparse=False, random=random)
+    environment_kwargs = environment_kwargs or {}
+    return control.Environment(
+        physics, task, time_limit=time_limit, **environment_kwargs
+    )
+
+
+@SUITE.add("benchmarking")
+def swingup_roll_camera2(
+    time_limit=_DEFAULT_TIME_LIMIT, random=None, environment_kwargs=None
+):
+    """Returns the Cartpole Swing-Up with roll camera angle."""
+    physics = Physics.from_xml_string(
+        common.read_model("cartpole_roll_camera2.xml"), common.ASSETS
+    )
+    task = Balance(swing_up=True, sparse=False, random=random)
+    environment_kwargs = environment_kwargs or {}
+    return control.Environment(
+        physics, task, time_limit=time_limit, **environment_kwargs
+    )
+
+
+@SUITE.add("benchmarking")
+def swingup_roll_camera3(
+    time_limit=_DEFAULT_TIME_LIMIT, random=None, environment_kwargs=None
+):
+    """Returns the Cartpole Swing-Up with roll camera angle."""
+    physics = Physics.from_xml_string(
+        common.read_model("cartpole_roll_camera3.xml"), common.ASSETS
+    )
+    task = Balance(swing_up=True, sparse=False, random=random)
+    environment_kwargs = environment_kwargs or {}
+    return control.Environment(
+        physics, task, time_limit=time_limit, **environment_kwargs
+    )
+
+
+@SUITE.add("benchmarking")
+def swingup_roll_camera4(
+    time_limit=_DEFAULT_TIME_LIMIT, random=None, environment_kwargs=None
+):
+    """Returns the Cartpole Swing-Up with roll camera angle."""
+    physics = Physics.from_xml_string(
+        common.read_model("cartpole_roll_camera4.xml"), common.ASSETS
+    )
+    task = Balance(swing_up=True, sparse=False, random=random)
+    environment_kwargs = environment_kwargs or {}
+    return control.Environment(
+        physics, task, time_limit=time_limit, **environment_kwargs
+    )
+
+
 @SUITE.add()
 def two_poles(time_limit=_DEFAULT_TIME_LIMIT, random=None, environment_kwargs=None):
     """Returns the Cartpole Balance task with two poles."""
