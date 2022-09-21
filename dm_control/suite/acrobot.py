@@ -133,6 +133,36 @@ def swingup_roll_camera2(
     )
 
 
+@SUITE.add("benchmarking")
+def swingup_roll_camera3(
+    time_limit=_DEFAULT_TIME_LIMIT, random=None, environment_kwargs=None
+):
+    """Returns Acrobot swingup no grid."""
+    physics = Physics.from_xml_string(
+        common.read_model("acrobot_roll_camera3.xml"), common.ASSETS
+    )
+    task = Balance(sparse=True, random=random)
+    environment_kwargs = environment_kwargs or {}
+    return control.Environment(
+        physics, task, time_limit=time_limit, **environment_kwargs
+    )
+
+
+@SUITE.add("benchmarking")
+def swingup_roll_camera4(
+    time_limit=_DEFAULT_TIME_LIMIT, random=None, environment_kwargs=None
+):
+    """Returns Acrobot swingup no grid."""
+    physics = Physics.from_xml_string(
+        common.read_model("acrobot_roll_camera4.xml"), common.ASSETS
+    )
+    task = Balance(sparse=True, random=random)
+    environment_kwargs = environment_kwargs or {}
+    return control.Environment(
+        physics, task, time_limit=time_limit, **environment_kwargs
+    )
+
+
 class Physics(mujoco.Physics):
     """Physics simulation with additional features for the Acrobot domain."""
 
