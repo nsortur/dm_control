@@ -85,6 +85,59 @@ def catch_roll_camera1(
         **environment_kwargs
     )
 
+@SUITE.add("benchmarking", "easy")
+def catch_roll_camera2(
+    time_limit=_DEFAULT_TIME_LIMIT, random=None, environment_kwargs=None
+):
+    """Returns the Ball-in-Cup task."""
+    physics = Physics.from_xml_string(
+        common.read_model("ball_in_cup_roll_camera2.xml"), common.ASSETS
+    )
+    task = BallInCup(random=random)
+    environment_kwargs = environment_kwargs or {}
+    return control.Environment(
+        physics,
+        task,
+        time_limit=time_limit,
+        control_timestep=_CONTROL_TIMESTEP,
+        **environment_kwargs
+    )
+
+@SUITE.add("benchmarking", "easy")
+def catch_roll_camera3(
+    time_limit=_DEFAULT_TIME_LIMIT, random=None, environment_kwargs=None
+):
+    """Returns the Ball-in-Cup task."""
+    physics = Physics.from_xml_string(
+        common.read_model("ball_in_cup_roll_camera3.xml"), common.ASSETS
+    )
+    task = BallInCup(random=random)
+    environment_kwargs = environment_kwargs or {}
+    return control.Environment(
+        physics,
+        task,
+        time_limit=time_limit,
+        control_timestep=_CONTROL_TIMESTEP,
+        **environment_kwargs
+    )
+
+@SUITE.add("benchmarking", "easy")
+def catch_roll_camera4(
+    time_limit=_DEFAULT_TIME_LIMIT, random=None, environment_kwargs=None
+):
+    """Returns the Ball-in-Cup task."""
+    physics = Physics.from_xml_string(
+        common.read_model("ball_in_cup_roll_camera4.xml"), common.ASSETS
+    )
+    task = BallInCup(random=random)
+    environment_kwargs = environment_kwargs or {}
+    return control.Environment(
+        physics,
+        task,
+        time_limit=time_limit,
+        control_timestep=_CONTROL_TIMESTEP,
+        **environment_kwargs
+    )
 
 class Physics(mujoco.Physics):
     """Physics with additional features for the Ball-in-Cup domain."""
